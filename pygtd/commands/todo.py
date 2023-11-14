@@ -11,7 +11,7 @@ def todo():
 
 @todo.command()
 @click.argument("title")
-def add(title):
+def add(title) -> None:
     with SessionLocal() as session:
         new_todo = Todo()
         new_todo.title = title
