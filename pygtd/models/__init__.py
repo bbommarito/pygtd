@@ -11,7 +11,8 @@ class ModelBase(DeclarativeBase):
 class TimestampedModelBase(ModelBase):
     __abstract__ = True
 
-    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True,
+                                    autoincrement=True)
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
