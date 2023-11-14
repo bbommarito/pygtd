@@ -14,13 +14,13 @@ class TimestampedModelBase(ModelBase):
     id: Mapped[int] = mapped_column(Integer, primary_key=True,
                                     autoincrement=True)
 
-    created_at: Mapped[datetime] = mapped_column(
+    created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime,
         nullable=False,
         default=datetime.datetime.now(datetime.UTC)
     )
 
-    updated_at: Mapped[datetime] = mapped_column(
+    updated_at: Mapped[datetime.datetime] = mapped_column(
         DateTime,
         nullable=False,
         default=datetime.datetime.now(datetime.UTC),
